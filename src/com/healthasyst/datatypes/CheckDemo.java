@@ -3,9 +3,8 @@ package com.healthasyst.datatypes;
 import com.healthasyst.employee.Employee;
 
 public class CheckDemo {
-
 	public static void main(String[] args) {
-		
+		//checking size
 		int c = 127;
 		
 		double f = 10.2; 
