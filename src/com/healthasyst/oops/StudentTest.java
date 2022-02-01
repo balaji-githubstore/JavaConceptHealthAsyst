@@ -4,16 +4,24 @@ public class StudentTest {
 
 	public static void main(String[] args) {
 		
-		Student stu1=new Student();
-		Student stu2=new Student();
-		Student stu3=new Student();
+		Student.setSchoolName("Global School");
+		
+		Student stu1=new Student("John");
+		Student stu2=new Student("Peter");
+		Student stu3=new Student("Mark");
 		
 		
 		stu1.setStudentPercentage(98.3);
+		stu1.setStudentMailId("john@gmail.com");
+		
+		stu2.setStudentMailId("peter@gmail.com");
+		stu2.setStudentPercentage(55);
 	
-		System.out.println(stu1.getStudentPercentage());
+//		System.out.println(stu1.getStudentPercentage());
+//		System.out.println(stu1.getStudentMailId());
 		
-		
+		stu1.printStudentDetail();
+		stu2.printStudentDetail();
 	
 		System.out.println();
 		

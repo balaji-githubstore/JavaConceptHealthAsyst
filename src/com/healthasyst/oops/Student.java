@@ -9,9 +9,10 @@ public class Student {
 
 	private static int counter = 1001;
 
-	public Student() {
+	public Student(String studentName) {
 		studentId = counter;
 		counter = counter + 1;
+		this.studentName=studentName;
 	}
 
 	// getter method
@@ -28,4 +29,43 @@ public class Student {
 		}
 	}
 
+	public String getStudentMailId() {
+		return studentMailId;
+	}
+
+	public void setStudentMailId(String studentMailId) {
+		if(studentMailId.contains("@"))
+		{
+			this.studentMailId = studentMailId;
+		}
+		else
+		{
+			System.out.println("Invalid mail id");
+		}
+	}
+
+	public static String getSchoolName() {
+		return schoolName;
+	}
+
+	public static void setSchoolName(String schoolName) {
+		Student.schoolName = schoolName;
+	}
+	
+	public void printStudentDetail()
+	{
+		System.out.println("Student Id: "+this.studentId);
+		System.out.println("Student Name: "+studentName);
+		System.out.println("Student MailID: "+getStudentMailId());
+		System.out.println("Student Percentage: "+studentPercentage);
+		System.out.println("School Name: "+Student.schoolName);
+		System.out.println("---------------------------------------");
+	}
+
 }
+
+
+
+
+
+

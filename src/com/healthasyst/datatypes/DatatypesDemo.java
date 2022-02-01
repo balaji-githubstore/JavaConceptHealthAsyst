@@ -36,9 +36,9 @@ public class DatatypesDemo {
 		System.out.println(g);
 
 		String myName = "Balaji"; // 6*16 bits
+		
 
-		System.out.println(myName);
-
+		
 		System.out.println(myName.charAt(5));
 
 		System.out.println(myName.length());
