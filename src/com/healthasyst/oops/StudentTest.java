@@ -7,8 +7,8 @@ public class StudentTest {
 		Student.setSchoolName("Global School");
 		
 		Student stu1=new Student("John");
-		Student stu2=new Student("Peter");
-		Student stu3=new Student("Mark");
+		Student stu2=new Student("Peter","peter@gmail.com");
+		Student stu3=new Student();
 		
 		
 		stu1.setStudentPercentage(98.3);

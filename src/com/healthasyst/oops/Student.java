@@ -8,11 +8,23 @@ public class Student {
 	private static String schoolName;
 
 	private static int counter = 1001;
+	
+	public Student() {
+		studentId = counter;
+		counter = counter + 1;
+	}
 
 	public Student(String studentName) {
 		studentId = counter;
 		counter = counter + 1;
-		this.studentName=studentName;
+		this.studentName = studentName;
+	}
+
+	public Student(String studentName, String mailId) {
+		studentId = counter;
+		counter = counter + 1;
+		this.studentName = studentName;
+		studentMailId = mailId;
 	}
 
 	// getter method
@@ -34,12 +46,9 @@ public class Student {
 	}
 
 	public void setStudentMailId(String studentMailId) {
-		if(studentMailId.contains("@"))
-		{
+		if (studentMailId.contains("@")) {
 			this.studentMailId = studentMailId;
-		}
-		else
-		{
+		} else {
 			System.out.println("Invalid mail id");
 		}
 	}
@@ -51,21 +60,14 @@ public class Student {
 	public static void setSchoolName(String schoolName) {
 		Student.schoolName = schoolName;
 	}
-	
-	public void printStudentDetail()
-	{
-		System.out.println("Student Id: "+this.studentId);
-		System.out.println("Student Name: "+studentName);
-		System.out.println("Student MailID: "+getStudentMailId());
-		System.out.println("Student Percentage: "+studentPercentage);
-		System.out.println("School Name: "+Student.schoolName);
+
+	public void printStudentDetail() {
+		System.out.println("Student Id: " + this.studentId);
+		System.out.println("Student Name: " + studentName);
+		System.out.println("Student MailID: " + getStudentMailId());
+		System.out.println("Student Percentage: " + studentPercentage);
+		System.out.println("School Name: " + Student.schoolName);
 		System.out.println("---------------------------------------");
 	}
 
 }
-
-
-
-
-
-
