@@ -1,4 +1,4 @@
-package com.healthasyst.oops;
+package com.healthasyst.encaps;
 
 public class StudentTest {
 
@@ -8,7 +8,7 @@ public class StudentTest {
 		
 		Student stu1=new Student("John");
 		Student stu2=new Student("Peter","peter@gmail.com");
-		Student stu3=new Student();
+		Student stu3=new Student("John");
 		
 		
 		stu1.setStudentPercentage(98.3);

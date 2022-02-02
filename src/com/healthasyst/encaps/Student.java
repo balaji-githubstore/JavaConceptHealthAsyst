@@ -1,4 +1,4 @@
-package com.healthasyst.oops;
+package com.healthasyst.encaps;
 
 public class Student {
 	private int studentId;
@@ -9,10 +9,10 @@ public class Student {
 
 	private static int counter = 1001;
 	
-	public Student() {
-		studentId = counter;
-		counter = counter + 1;
-	}
+//	public Student() {
+//		studentId = counter;
+//		counter = counter + 1;
+//	}
 
 	public Student(String studentName) {
 		studentId = counter;
