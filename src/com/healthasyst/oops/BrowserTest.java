@@ -1,5 +1,7 @@
 package com.healthasyst.oops;
 
+import com.healthasyst.encaps.Student;
+
 interface WebDriver
 {
 	void quit();
@@ -7,8 +9,15 @@ interface WebDriver
 	public abstract void close();
 	void getCurrentUrl();
 }
-
-class ChromeDriver implements WebDriver
+interface TakeScreenshot
+{
+	void getScreenshot();
+}
+interface JavaScriptExecutor
+{
+	void executeScrip();
+}
+class ChromeDriver implements WebDriver,TakeScreenshot,JavaScriptExecutor
 {
 	public ChromeDriver()
 	{
@@ -33,9 +42,24 @@ class ChromeDriver implements WebDriver
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void chromeDemo()
+	{
+		System.out.println("chrome demo");
+	}
+	@Override
+	public void getScreenshot() {
+		System.out.println("take screen ch shot");
+		
+	}
+	@Override
+	public void executeScrip() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
-class FirefoxDriver implements WebDriver
+class FirefoxDriver implements WebDriver, TakeScreenshot, JavaScriptExecutor
 {
 	public FirefoxDriver()
 	{
@@ -63,6 +87,16 @@ class FirefoxDriver implements WebDriver
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public void getScreenshot() {
+		System.out.println("take screen shot ff");
+		
+	}
+	@Override
+	public void executeScrip() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
 
@@ -73,20 +107,36 @@ public class BrowserTest {
 //		WebDriver driver =new ChromeDriver();
 //		driver.quit(); //Method to be called is resolved during run time.
 		
-		String browser="hh";
-		WebDriver driver=null;
+		String browser="ch";
+//		WebDriver driver=null;
+//		
+//		if(browser.equalsIgnoreCase("ch"))
+//		{
+//			driver=new ChromeDriver(); //launch browser
+//		}
+//		else
+//		{
+//			driver=new FirefoxDriver(); 
+//		}
 		
-		if(browser.equalsIgnoreCase("ch"))
-		{
-			driver=new ChromeDriver(); //launch browser
-		}
-		else
-		{
-			driver=new FirefoxDriver(); 
-		}
-		
+		WebDriver driver=new FirefoxDriver();
 		
 		driver.quit();
+		driver.close();
+		driver.getCurrentUrl();
+		driver.getTitle();
+		
+		TakeScreenshot ts= (TakeScreenshot) driver;
+		ts.getScreenshot();
+		
+		
+//		ChromeDriver d=(ChromeDriver) driver;
+//		d.chromeDemo();
+		
+		JavaScriptExecutor js=(JavaScriptExecutor) driver;
+		js.executeScrip();
+		
+
 		
 	}
 

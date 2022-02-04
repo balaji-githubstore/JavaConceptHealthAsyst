@@ -58,7 +58,7 @@ public class DatatypesDemo {
 		int base=25;
 		int height=1;
 		
-		double res= (base*height)/2.0;
+		double res= ((double)base*height)/2;
 		System.out.println(res);
 		
 		System.out.println((float)25/2);

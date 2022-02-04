@@ -6,6 +6,10 @@ public class EmployeeTest {
 
 		Employee.companyName="HA";
 		
+		Employee e2= Employee.createInstance();
+		
+		Employee.printEmployeeDetail(Employee.createInstance());
+		
 		Employee emp1=new Employee();	
 		Employee emp2=new Employee();
 		Employee emp3=new Employee();

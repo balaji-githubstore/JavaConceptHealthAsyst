@@ -59,18 +59,28 @@ class ContractEmployee extends Employee {
 }
 
 public class EmployeeTest {
+	
+	public static void payRoll(Employee e)
+	{
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		Employee p = new PermanentEmployee();
+		
+		p.displayEmployeeDetails();
 
 		p.setEmpName("john");
 
 		System.out.println(p.calculateSalary());
 		
 		Employee c = new ContractEmployee();
+		
+		EmployeeTest.payRoll(p);
 
+		EmployeeTest.payRoll(c);
 	}
 
 }

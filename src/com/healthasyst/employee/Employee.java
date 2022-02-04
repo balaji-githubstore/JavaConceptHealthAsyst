@@ -7,14 +7,14 @@ public class Employee {
 	public static String companyName;
 	
 	//print employee details
-//	public static void printEmployeeDetail(Employee emp)
-//	{
-//		System.out.println(emp.empId);
-//		System.out.println(emp.empName);
-//		System.out.println(emp.empSalary);
-//		System.out.println(Employee.companyName);
-//		System.out.println("----------------------------");
-//	}
+	public static void printEmployeeDetail(Employee emp)
+	{
+		System.out.println(emp.empId);
+		System.out.println(emp.empName);
+		System.out.println(emp.empSalary);
+		System.out.println(Employee.companyName);
+		System.out.println("----------------------------");
+	}
 	
 	public void printEmployeeDetail()
 	{
@@ -27,4 +27,9 @@ public class Employee {
 		System.out.println("----------------------------");
 	}
 
+	public static Employee createInstance()
+	{
+		Employee e=new Employee();
+		return e;
+	}
 }
